@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.logo {
+    max-width: 150px;
+}
+.limit {
+    max-width: 100%;
+    margin: 0 auto;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f0f0f0;
+}
+header{
+    background-image: url(images/Angela\ Kishin\ Densetsu\ \(Strings\ Of\ Fate\).jpeg);
+    background-size: cover;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.header-nav{
+    width: 70%;
+    flex: 5;
+    padding: 20px 34px;
+    margin: 0 auto;
+}
+.header-nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    list-style: none;
+}
+
+.header-nav ul li {
+    margin: 0 20px;
+    padding-bottom: 8px;
+}
+
+.header-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.header-nav a:hover {
+    text-decoration: underline;
+}
+.header-content {
+    text-align: center;
+    color: #fff;
+    margin-top: 150px; 
+    margin-bottom: 50px;
+}
+
+.block-interface {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+    z-index: 2; 
+    margin:   auto;
+}
+.block-field {
+    flex: 1;
+}
+.block-field input, .block-field select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.flex-center{
+    justify-content: center;
+    align-items: end;
+    gap: 120px;
+}
+.d-flex{
+    display: flex;
+}
