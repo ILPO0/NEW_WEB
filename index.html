@@ -8,13 +8,18 @@
 </head>
 <body> 
     <header>
-        <div class="header-container header-nav">
-            
+        <div class="header-nav">
             <ul class="flex-center">
-               <img src="images/MLBB-logo.png" alt="logo" class="logo">
-               <li class="menu__list-item">
-                    <a href="#">Продукты</a>
+                <img src="images/mlbb_logo.png" alt="logo" class="logo">
+                <li class="menu__list-item dropdown">
+                    <a href="#" class="dropdown-btn">Продукты <span class="arrow">&#9660;</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Выдать Аккаунт</a></li>
+                        <li><a href="#">Взять Аккаунт</a></li>
+                        <li><a href="#">Купить Аккаунт</a></li>
+                    </ul>
                 </li>
+                
                 <li class="menu__list-item">
                     <a href="#">Отзывы</a>
                 </li>
@@ -26,6 +31,7 @@
                 </li>
             </ul>
         </div>
+        
         <div class="header-content">
             <h1>Страхование путешественников</h1>
             <h3>Полис, который действительно работает</h3>
@@ -49,13 +55,108 @@
                     <option>500</option>
                 </select>
             </div>
+            
+
+        </div>
+        <div class="button">
             <button class="block-button">Узнать стоимость</button>
         </div>
-
     </header>
 
     <main>
+        <div class="block-container">
+            <!-- 1 блок: текст:фото -->
+            <div class="block">
+                <div class="text">
+                    <h2>LanN</h2>
+                    
+                </div>
+                <div class="image">
+                    <img src="images/joy.jpeg" alt="Изображение 1">
+                </div>
+            </div>
+            
+            <!-- 2 блок: фото:текст -->
+            <div class="block reverse">
+                <div class="image">
+                    <img src="images/moskow.jpeg" alt="Изображение 2">
+                </div>
+                <div class="text">
+                    <h2>KING</h2>
+                </div>
+            </div>
+            
+            <!-- 3 блок: текст:фото-->
+            <div class="block">
+                <div class="text">
+                    <h2>A3NW</h2>
+                </div>
+                <div class="image">
+                    <img src="images/Edith.jpeg" alt="Изображение 3">
+                </div>
+            </div>
+            <!-- 4 блок: фото:текст -->
+            <div class="block reverse">
+                <div class="image">
+                    <img src="images/Xavier.jpeg" alt="Изображение 4">
+                </div>
+                <div class="text">
+                    <h2>Rohan_23B</h2>
+                </div>
+            </div>
+            <!-- 5 блок: текст:фото-->
+            <div class="block">
+                <div class="text">
+                    <h2>ILPO</h2>
+                </div>
+                <div class="image">
+                    <img src="images/terizla.jpeg" alt="Изображение 5">
+                </div>
+            </div>
+        </div>
+        <div class="text-between">
+            <h2>text</h2>
+        </div>
         
+        <div class="container">
+            <div class="card">
+                <div class="card-number">1</div>
+                <div class="card-icon">
+                    <img src="images/Vector.svg" alt="Calculator Icon">
+                </div>
+                <div class="card-text">
+                    Рассчитайте онлайн<br>стоимость полиса
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-number">2</div>
+                <div class="card-icon">
+                    <img src="images/Vector.svg" alt="Calculator Icon">
+                </div>
+                <div class="card-text">
+                    Рассчитайте онлайн<br>стоимость полиса
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-number">3</div>
+                <div class="card-icon">
+                    <img src="images/Vector.svg" alt="Calculator Icon">
+                </div>
+                <div class="card-text">
+                    Рассчитайте онлайн<br>стоимость полиса
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-number">4</div>
+                <div class="card-icon">
+                    <img src="images/Vector.svg" alt="Calculator Icon">
+                </div>
+                <div class="card-text">
+                    Рассчитайте онлайн<br>стоимость полиса
+                </div>
+            </div>
+        
+        </div>
     </main>
 
     <footer>

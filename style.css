@@ -12,15 +12,15 @@
 body {
     font-family: Arial, sans-serif;
     color: #333;
-    background-color: #f0f0f0;
+    background-color: white;
 }
 header{
-    background-image: url(images/Angela\ Kishin\ Densetsu\ \(Strings\ Of\ Fate\).jpeg);
+    background-image: url(images/background.png);
     background-size: cover;
 
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 800px;
 }
 
 .header-nav{
@@ -28,7 +28,59 @@ header{
     flex: 5;
     padding: 20px 34px;
     margin: 0 auto;
+    height: fit-content;
+    
 }
+.header-nav ul{
+
+}
+.dropdown {
+    position: relative;  /*дочерний элемент снизу будет*/
+}
+
+.dropdown-btn {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.arrow {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.header-nav ul li .dropdown-content {
+    display: none; /* Изначально скрываем меню */
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Пункты выпадающего меню */
+.dropdown-content li {
+    padding: 12px 16px;
+    border-bottom: 1px solid #555;
+}
+
+.dropdown-content li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #575757;
+}
+
+/* Показываем меню при наведении */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .header-nav ul {
     display: flex;
     justify-content: space-around;
@@ -80,12 +132,102 @@ header{
     border-radius: 4px;
     width: 100%;
 }
+header .button{
+    min-height: 10%;
+    display: flex;
+    justify-content: center;
+}
+header button{
+    min-height: 70px ;
+    background-color: pink;
+    width: 20%;
+    margin-top: 50px;
+    font-size: large;
+}
+.block-container {
+    max-width: 70%;
+    margin: 0 auto; /*Центрируем по горизонтали*/
+}
+
+.block {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; /*по вертикали */
+    margin: 100px 0; /*Отступы*/
+}
+.block .text {
+    flex: 1; /* текст = 1 часть пространства */
+    padding: 10px;
+    font-size: 18px;
+}
+.block .image {
+    flex: 1; /* фотка = 1 часть пространства */
+    display: flex;
+    justify-content: center; /* Центрируем фото в блоке */
+    padding: 10px;
+}
+.block .image img {
+    max-width: 100%; 
+    height: auto;
+}
+.text-between{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+
+    margin: 0 auto; /*Центрируем по горизонтали*/
+}
+
+/* Общий стиль для карточки */
+.card {
+    width: 295px;
+    height: 295px; 
+    background-color: #f4f1fd; /*Светло-фиолетовый*/
+    border-radius: 10px; /* Скругленные углы */
+    text-align: center; /* Центрируем текст и иконку */
+    padding: 20px;
+    margin: 20px;
+    position: relative; /* Для позиционирования номера */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для придания объема */
+}
+
+/* Большой номер на заднем плане */
+.card-number {
+    font-size: 120px;
+    color: rgba(189, 149, 223, 0.3); /* Светло-фиолетовый цвет с прозрачностью */
+    position: absolute; /* Позиционируем номер поверх фона */
+    top: 10px;
+    left: 10px;
+    z-index: 0; /*номер на задний план */
+}
+
+/* Стиль для иконки */
+.card-icon {
+    margin-top: 60px; /* Отступ сверху для иконки */
+    z-index: 1; /* Иконка поверх номера */
+}
+
+.card-icon img {
+    width: 100px; /* Размер иконки (можно изменить) */
+    height: auto;
+}
+
+/* Стиль текста */
+.card-text {
+    font-size: 18px;
+    color: #333; /* Темный цвет текста */
+    z-index: 1; /* Текст поверх номера */
+    margin-top: 20px;
+}
 
 .flex-center{
-    justify-content: center;
-    align-items: end;
-    gap: 120px;
-}
-.d-flex{
     display: flex;
+    justify-content: space-between;
+    align-items: end;
 }
