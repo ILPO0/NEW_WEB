@@ -12,9 +12,9 @@
 body {
     font-family: Arial, sans-serif;
     color: #333;
-    background-color: white;
+    background-color: gray;
 }
-header{
+header {
     background-image: url(images/background.png);
     background-size: cover;
 
@@ -23,16 +23,12 @@ header{
     height: 800px;
 }
 
-.header-nav{
+.header-nav {
     width: 70%;
     flex: 5;
     padding: 20px 34px;
     margin: 0 auto;
-    height: fit-content;
-    
-}
-.header-nav ul{
-
+    height: fit-content; 
 }
 .dropdown {
     position: relative;  /*дочерний элемент снизу будет*/
@@ -52,7 +48,7 @@ header{
 }
 
 .header-nav ul li .dropdown-content {
-    display: none; /* Изначально скрываем меню */
+    display: none; /* Изначально скрывает меню */
     position: absolute;
     background-color: #444;
     min-width: 160px;
@@ -76,68 +72,68 @@ header{
     background-color: #575757;
 }
 
-/* Показываем меню при наведении */
+/* Показывает меню при наведении */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
 .header-nav ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around;                                           /*тут все понятно*/
     align-items: end;
     list-style: none;
 }
 
 .header-nav ul li {
-    margin: 0 20px;
-    padding-bottom: 8px;
+    margin: 0 20px;                                                                 /*тут тоже*/
 }
 
 .header-nav a {
     color: white;
-    text-decoration: none;
+    text-decoration: none;                                                          /*тут тоже*/
     font-size: 18px;
 }
 .header-nav a:hover {
-    text-decoration: underline;
+    text-decoration: underline;                                                     /*тут тоже*/
 }
 .header-content {
     text-align: center;
-    color: #fff;
-    margin-top: 150px; 
+    color: #fff;                                                                   /*тут тоже*/
+    margin-top: 150px;  
     margin-bottom: 50px;
 }
 
 .block-interface {
     display: flex;
-    justify-content: center;
+    justify-content: center;                                                          /*тут тоже*/
     align-items: center;
     background-color: white;
     border-radius: 8px;
     padding: 20px;
     width: 80%;
     max-width: 1000px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /*тут короче тень*/
     gap: 10px;
-    z-index: 2; 
-    margin:   auto;
+    z-index: 2;                                                   /*это хз, забыл*/
+    margin:   auto;      /*центрирует элем. в родителе*/
+    flex-wrap: wrap; /* элементы на след. строку */
 }
 .block-field {
-    flex: 1;
+    flex: 1;        /*чтобы каждый занимал одинаковое кол-во места*/
 }
-.block-field input, .block-field select {
+.block-field input, .block-field select {       /*там где надо писать чета*/
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc;                                       /*тут все понятно*/
     border-radius: 4px;
     width: 100%;
 }
-header .button{
+header .button {
     min-height: 10%;
     display: flex;
     justify-content: center;
 }
-header button{
+header button {
     min-height: 70px ;
     background-color: pink;
     width: 20%;
@@ -170,12 +166,12 @@ header button{
     max-width: 100%; 
     height: auto;
 }
-.text-between{
+.text-between {
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
 }
-.container {
+.card-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,7 +199,7 @@ header button{
     color: rgba(189, 149, 223, 0.3); /* Светло-фиолетовый цвет с прозрачностью */
     position: absolute; /* Позиционируем номер поверх фона */
     top: 10px;
-    left: 10px;
+    left: 20px;
     z-index: 0; /*номер на задний план */
 }
 
@@ -226,8 +222,185 @@ header button{
     margin-top: 20px;
 }
 
-.flex-center{
+.flex-center {
     display: flex;
     justify-content: space-between;
     align-items: end;
+}
+/*------------------------------------------------------Для Планшетов-----------------------------------------------------------*/
+@media (max-width: 766px) {
+    .header-nav {
+        width: 90%; 
+        padding: 10px; 
+    }
+
+    .header-content {
+        margin-top: 100px; /* меньше верхний отступ */
+        margin-bottom: 30px; /* меньше нижний */
+    }
+
+    .block-interface {
+        flex-direction: column; /*меняем направление на колонку  */
+        width: 60%; /* ширина больше*/
+    }
+
+    .block {
+        flex-direction: column; /*меняем направление на колонку */
+        margin: 50px 0; /* меншье отступы */
+    }
+
+    .block-container {
+        max-width: 90%; /* ширина больше*/
+    }
+
+    .card {
+        width: 90%; /* ширина больше*/
+        height: auto; /* Убираем фиксированную высоту для адаптивности */
+        margin: 10px 0; /* меньеш отступы */
+    }
+
+    .card-number {
+        font-size: 80px; /* меньше размер */
+    }
+
+    .card-text {
+        font-size: 16px; /* меньше размер */
+    }
+}
+
+/*-----------------------------------------------------это короче для телефона------------------------------------------------*/
+@media (max-height: 800) {
+    header {
+        height:1500px;
+    }
+}
+@media (max-width: 480px) {
+    header {
+        background-image: url(images/Zhuxin\ \(Lantern\ of\ Spirits\).jpeg);
+    }
+
+    header button {
+
+        width: 50%; /* ширина больше*/
+        font-size: medium; /* меньше размер */
+    }
+
+    .header-nav ul {
+        flex-direction: column;  /*меняем направление на колонку */
+        align-items: center;
+    }
+
+    .header-nav ul li {
+        margin: 10px 0; /* меншье отступы */
+    }
+
+    h1 {
+        font-size: 24px; /* меньше размер */
+    }
+
+    h3 {
+        font-size: 18px; /* меньше размер */
+    }
+    
+    .text-between {
+        padding-bottom: 10px; /* меншье отступы */
+    }
+
+    .card-container {
+        flex-wrap: wrap;
+
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.links{
+	display: flex;
+	flex-wrap: wrap;
+}
+footer ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.links_menu{
+   width: 25%;
+   padding: 0 15px;
+}
+.links_menu h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.links_menu h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.links_menu ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.links_menu ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.links_menu ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.links_menu .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.links_menu .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+@media(max-width: 767px){
+  .links_menu{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .links_menu{
+    width: 100%;
+}
 }
